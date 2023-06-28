@@ -32,17 +32,41 @@ To secure data
 - touch .gitignore
 - touch env.py (this is where we hide sensitive data)
 
+![Steps to deploy](/steps.png)
+
 
 - npm install -g heroku (the -g means it is installed globally)
 
 after it is insntalled
 
+### step 1 ### 
+
 - heroku login -i
 
 when asked for password I need to enter the api key generated on the Heroku webpage.
 
+
+
 Heroku commands:
 
-heroku apps (to see the apps available)
+- heroku apps (to see the apps available)
 
-heroku apps: rename new_name_of_app --app current_name_of_app
+- heroku apps: rename new_name_of_app --app current_name_of_app
+
+- git remote add heroku heroku_app_url
+
+- git remote -v 
+should now show heroku as well and now we should be able to push project to Heroku
+
+### Step 3 ###
+
+Before we can push to Heroku we need to create a requirements.txt with a list of all our dependensies
+- pip3 freeze --local > requirements.txt
+This will redirect the output from our freeze command into a file called requirements.txt
+
+- git push -u heroku main
+
+### Step 4 ###
+
+- echo web: python run.py > Procfile
+
