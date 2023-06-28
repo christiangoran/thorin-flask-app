@@ -39,3 +39,10 @@ after it is insntalled
 
 - heroku login -i
 
+when asked for password I need to enter the api key generated on the Heroku webpage.
+
+Heroku commands:
+
+heroku apps (to see the apps available)
+
+heroku apps: rename new_name_of_app --app current_name_of_app
