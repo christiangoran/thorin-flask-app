@@ -12,3 +12,30 @@
 
  {{ used_for_expression }}
  {% Used_for_statements %} this is called Logic control
+
+ ------- Readin from a JSON file
+
+ I created a json file and then bound it to my run.py file, specifically the about page with the code:
+     data = []
+    with open("data/company.json", "r") as json_data:
+        data = json.load(json_data)
+
+and then I added company=data to the render_template command below.
+Then in the about.html I added the following line:
+   {{ company[1]["name"] }}
+Telling what part of the object in the json file that I would like to have displayed in the about page
+
+---
+To secure data
+---
+
+- touch .gitignore
+- touch env.py (this is where we hide sensitive data)
+
+
+- npm install -g heroku (the -g means it is installed globally)
+
+after it is insntalled
+
+- heroku login -i
+

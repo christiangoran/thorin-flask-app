@@ -26,5 +26,12 @@
    "editor.defaultFormatter": "HookyQR.beautify",
    "[html]": {
       "editor.defaultFormatter": "vscode.html-language-features"
-   }
+   },
+   "[json]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+   },
+   "[python]": {
+      "editor.defaultFormatter": "ms-python.autopep8"
+   },
+   "python.formatting.provider": "none"
 }
